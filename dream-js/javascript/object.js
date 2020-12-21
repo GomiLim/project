@@ -49,7 +49,7 @@ for (key in ellie) {
 
 //for (value of iterable) - 배열용
 const array = [1, 2, 3, 4, 5];
-for (value of attay) {
+for (let value of array) {
   console.log(value);
 }
 
