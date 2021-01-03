@@ -23,10 +23,11 @@ console.log(ellie["name"]);
 const person1 = { name: "bob", age: "2" };
 const person2 = { name: "steve", age: "3" };
 const person3 = { name: "dave", age: "4" };
-const person4 = new Person(ellie, "30");
+const person4 = makePerson("ellie", "30");
+const person5 = new Person("ellie", "30");
 
-function makeFunction(name, age) {
-  return name, age;
+function makePerson(name, age) {
+  return { name, age };
 }
 //이렇게 class 같이 쓰는 애들은 this를 활용해서 만들어 준답니당
 //4. constructor Function;
@@ -37,7 +38,7 @@ function Person(name, age) {
   // return this
 }
 
-//5. inoperator (key in obj) : ellie obj안에 name 이라는 key 가 있는지 확인 : 값 : boolean
+//5. in operator (key in obj) : ellie obj안에 name 이라는 key 가 있는지 확인 : 값 : boolean
 console.log("name" in ellie);
 console.log("age" in ellie);
 
